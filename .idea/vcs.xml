@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/react-native-appearance" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/styled-components" vcs="Git" />
   </component>
 </project>
