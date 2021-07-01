@@ -28,15 +28,7 @@ export default function App() {
             isLoggedInVar(true);
             tokenVar(token);
         }
-        await persistCache({
-            cache,
-            storage: new AsyncStorageWrapper(AsyncStorage),
-            /*
-                TIP) 왜 serialize 했느냐? 쿼리가 변경되면 cache 의 내용과 충돌하는데,
-                아래의 serialize 를 false 하면 에러가 해결
-             */
-            serialize: false,
-        });
+        
         return preloadAssets();
     };
     if (loading) {
