@@ -1,14 +1,7 @@
 import {gql, useLazyQuery} from "@apollo/client";
 import React, {useEffect} from "react";
 import {useForm} from "react-hook-form";
-import {
-    ActivityIndicator,
-    FlatList,
-    Image,
-    TouchableOpacity,
-    useWindowDimensions,
-    View,
-} from "react-native";
+import {ActivityIndicator, FlatList, Image, TouchableOpacity, useWindowDimensions, View,} from "react-native";
 import styled from "styled-components/native";
 import DismissKeyboard from "../components/DismissKeyboard";
 
@@ -75,7 +68,13 @@ export default function Search({navigation}) {
         });
     }, []);
     const renderItem = ({item: photo}) => (
-        <TouchableOpacity>
+        <TouchableOpacity
+            onPress={() =>
+                navigation.navigate("Photo", {
+                    photoId: photo.id,
+                })
+            }
+        >
             <Image
                 source={{uri: photo.file}}
                 style={{width: width / numColumns, height: 100}}
